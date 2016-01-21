@@ -1,0 +1,1 @@
+.\usbdmain.o: usbdmain.c

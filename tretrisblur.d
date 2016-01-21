@@ -1,0 +1,1 @@
+.\tretrisblur.o: tretrisBlur.c

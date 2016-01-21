@@ -1,0 +1,1 @@
+.\gallery.o: Gallery.c

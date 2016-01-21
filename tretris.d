@@ -1,0 +1,1 @@
+.\tretris.o: tretris.c

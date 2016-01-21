@@ -1,0 +1,11 @@
+.\tetris.o: tetris.c
+.\tetris.o: LPC17xx.h
+.\tetris.o: core_cm3.h
+.\tetris.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\tetris.o: system_LPC17xx.h
+.\tetris.o: type.h
+.\tetris.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\tetris.o: GLCD.h
+.\tetris.o: LED.h
+.\tetris.o: ADC.h
+.\tetris.o: KBD.h

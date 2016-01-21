@@ -1,0 +1,1 @@
+.\yellow.o: YELLOW.c

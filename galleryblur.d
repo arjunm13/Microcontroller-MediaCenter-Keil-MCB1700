@@ -1,0 +1,1 @@
+.\galleryblur.o: GalleryBlur.c

@@ -1,0 +1,1 @@
+.\computers.o: computers.c

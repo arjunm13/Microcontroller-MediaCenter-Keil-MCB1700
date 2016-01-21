@@ -1,0 +1,1 @@
+.\blubox.o: blubox.c

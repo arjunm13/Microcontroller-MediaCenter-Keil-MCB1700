@@ -1,0 +1,1 @@
+.\audioimage.o: audioImage.c

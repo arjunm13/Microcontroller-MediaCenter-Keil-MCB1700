@@ -1,0 +1,1081 @@
+ARM Linker, 5.03 [Build 76] [MDK-ARM Professional]
+
+==============================================================================
+
+Section Cross References
+
+    startup_lpc17xx.o(STACK) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_lpc17xx.o(HEAP) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_lpc17xx.o(RESET) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_lpc17xx.o(RESET) refers to startup_lpc17xx.o(STACK) for __initial_sp
+    startup_lpc17xx.o(RESET) refers to startup_lpc17xx.o(.text) for Reset_Handler
+    startup_lpc17xx.o(RESET) refers to irq.o(.text) for SysTick_Handler
+    startup_lpc17xx.o(RESET) refers to media.o(.text) for TIMER0_IRQHandler
+    startup_lpc17xx.o(RESET) refers to adc.o(.text) for ADC_IRQHandler
+    startup_lpc17xx.o(RESET) refers to usbhw.o(.text) for USB_IRQHandler
+    startup_lpc17xx.o(.ARM.__at_0x02FC) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_lpc17xx.o(.text) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_lpc17xx.o(.text) refers to system_lpc17xx.o(.text) for SystemInit
+    startup_lpc17xx.o(.text) refers to __main.o(!!!main) for __main
+    startup_lpc17xx.o(.text) refers to startup_lpc17xx.o(HEAP) for Heap_Mem
+    startup_lpc17xx.o(.text) refers to startup_lpc17xx.o(STACK) for Stack_Mem
+    adcuser.o(.text) refers to usbcore.o(.data) for SetupPacket
+    adcuser.o(.text) refers to usbcore.o(.bss) for EP0Buf
+    adcuser.o(.text) refers to media.o(.data) for Mute
+    adcuser.o(.text) refers to adcuser.o(.data) for .data
+    usbcore.o(.text) refers to usbhw.o(.text) for USB_ReadEP
+    usbcore.o(.text) refers to usbcore.o(i.USB_ReqGetStatus) for USB_ReqGetStatus
+    usbcore.o(.text) refers to usbcore.o(i.USB_ReqSetClrFeature) for USB_ReqSetClrFeature
+    usbcore.o(.text) refers to usbcore.o(i.USB_ReqGetDescriptor) for USB_ReqGetDescriptor
+    usbcore.o(.text) refers to usbcore.o(i.USB_ReqSetConfiguration) for USB_ReqSetConfiguration
+    usbcore.o(.text) refers to usbcore.o(i.USB_ReqSetInterface) for USB_ReqSetInterface
+    usbcore.o(.text) refers to adcuser.o(.text) for ADC_IF_GetRequest
+    usbcore.o(.text) refers to usbcore.o(.data) for .data
+    usbcore.o(.text) refers to usbcore.o(.bss) for .bss
+    usbhw.o(.text) refers to usbhw.o(.data) for .data
+    usbhw.o(.text) refers to usbhw.o(.bss) for .bss
+    usbhw.o(.text) refers to usbhw.o(USB_RAM) for USB_RAM
+    usbhw.o(.text) refers to usbcore.o(.data) for USB_DeviceStatus
+    usbhw.o(.text) refers to usbhw.o(.constdata) for .constdata
+    usbhw.o(.text) refers to usbuser.o(.text) for USB_Reset_Event
+    usbhw.o(.text) refers to usbuser.o(.constdata) for USB_P_EP
+    usbuser.o(.text) refers to usbcore.o(.text) for USB_ResetCore
+    usbuser.o(.text) refers to usbhw.o(.text) for USB_DMA_BufAdr
+    usbuser.o(.text) refers to media.o(.data) for DataBuf
+    usbuser.o(.text) refers to media.o(.data) for InfoBuf
+    usbuser.o(.constdata) refers to usbcore.o(.text) for USB_EndPoint0
+    usbuser.o(.constdata) refers to usbuser.o(.text) for USB_EndPoint3
+    adc.o(.text) refers to adc.o(.data) for .data
+    glcd_spi_lpc1700.o(.text) refers to glcd_spi_lpc1700.o(.data) for .data
+    glcd_spi_lpc1700.o(.text) refers to glcd_spi_lpc1700.o(.constdata) for .constdata
+    irq.o(.text) refers to led.o(.text) for LED_Out
+    irq.o(.text) refers to adc.o(.text) for ADC_StartCnv
+    irq.o(.text) refers to irq.o(.data) for .data
+    irq.o(.text) refers to adc.o(.data) for AD_last
+    led.o(.text) refers to led.o(.constdata) for .constdata
+    media.o(.text) refers to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
+    media.o(.text) refers to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
+    media.o(.text) refers to _printf_dec.o(.text) for _printf_int_dec
+    media.o(.text) refers to glcd_spi_lpc1700.o(.text) for GLCD_Init
+    media.o(.text) refers to kbd.o(.text) for get_button
+    media.o(.text) refers to led.o(.text) for LED_Out
+    media.o(.text) refers to noretval__2sprintf.o(.text) for __2sprintf
+    media.o(.text) refers to media.o(.data) for .data
+    media.o(.text) refers to mainback.o(.constdata) for mainBack
+    media.o(.text) refers to audioimage.o(.constdata) for audioImage
+    media.o(.text) refers to tretris.o(.constdata) for tetris
+    media.o(.text) refers to gallery.o(.constdata) for Gallery
+    media.o(.text) refers to computers.o(.constdata) for computers
+    media.o(.text) refers to player.o(.constdata) for player
+    media.o(.text) refers to media.o(.bss) for .bss
+    media.o(.text) refers to blubox.o(.constdata) for background
+    media.o(.text) refers to yellow2.o(.constdata) for yellow2
+    media.o(.text) refers to rt_memcpy_w.o(.text) for __aeabi_memcpy4
+    media.o(.text) refers to system_lpc17xx.o(.text) for SystemClockUpdate
+    media.o(.text) refers to usbhw.o(.text) for USB_Init
+    media.o(.text) refers to system_lpc17xx.o(.data) for SystemFrequency
+    media.o(.text) refers to galleryblur.o(.constdata) for GalleryBlur
+    media.o(.text) refers to tretrisblur.o(.constdata) for tetrisBlur
+    media.o(.text) refers to audioimageblur.o(.constdata) for audioImageBlur
+    media.o(.text) refers to adcuser.o(.data) for VolCur
+    system_lpc17xx.o(.text) refers to lludivv7m.o(.text) for __aeabi_uldivmod
+    system_lpc17xx.o(.text) refers to system_lpc17xx.o(.data) for .data
+    __2sprintf.o(.text) refers to _printf_char_common.o(.text) for _printf_char_common
+    __2sprintf.o(.text) refers to _sputc.o(.text) for _sputc
+    noretval__2sprintf.o(.text) refers to _printf_char_common.o(.text) for _printf_char_common
+    noretval__2sprintf.o(.text) refers to _sputc.o(.text) for _sputc
+    __printf.o(.text) refers to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
+    _printf_dec.o(.text) refers to _printf_intcommon.o(.text) for _printf_int_common
+    __printf_flags.o(.text) refers to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
+    __printf_flags.o(.text) refers to __printf_flags.o(.constdata) for .constdata
+    __printf_ss.o(.text) refers to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
+    __printf_flags_ss.o(.text) refers to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
+    __printf_flags_ss.o(.text) refers to __printf_flags_ss.o(.constdata) for .constdata
+    __printf_wp.o(.text) refers to __printf_wp.o(i._is_digit) for _is_digit
+    __printf_wp.o(.text) refers to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
+    __printf_flags_wp.o(.text) refers to __printf_wp.o(i._is_digit) for _is_digit
+    __printf_flags_wp.o(.text) refers to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
+    __printf_flags_wp.o(.text) refers to __printf_flags_wp.o(.constdata) for .constdata
+    __printf_ss_wp.o(.text) refers to __printf_wp.o(i._is_digit) for _is_digit
+    __printf_ss_wp.o(.text) refers to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
+    __printf_flags_ss_wp.o(.text) refers to __printf_wp.o(i._is_digit) for _is_digit
+    __printf_flags_ss_wp.o(.text) refers to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
+    __printf_flags_ss_wp.o(.text) refers to __printf_flags_ss_wp.o(.constdata) for .constdata
+    _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) refers (Weak) to _printf_dec.o(.text) for _printf_int_dec
+    _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) refers (Special) to _printf_percent_end.o(.ARM.Collect$$_printf_percent$$00000017) for _printf_percent_end
+    __main.o(!!!main) refers to rtentry.o(.ARM.Collect$$rtentry$$00000000) for __rt_entry
+    rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for __rt_entry_li
+    rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for __rt_entry_main
+    rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to rtentry2.o(.ARM.Collect$$rtentry$$0000000C) for __rt_entry_postli_1
+    rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to rtentry2.o(.ARM.Collect$$rtentry$$00000009) for __rt_entry_postsh_1
+    rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to rtentry2.o(.ARM.Collect$$rtentry$$00000002) for __rt_entry_presh_1
+    rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to rtentry4.o(.ARM.Collect$$rtentry$$00000004) for __rt_entry_sh
+    aeabi_ldiv0_sigfpe.o(.text) refers to rt_div0.o(.text) for __rt_div0
+    _printf_char_common.o(.text) refers to __printf.o(.text) for __printf
+    rtentry2.o(.ARM.Collect$$rtentry$$00000008) refers to boardinit2.o(.text) for _platform_post_stackheap_init
+    rtentry2.o(.ARM.Collect$$rtentry$$0000000A) refers to libinit.o(.ARM.Collect$$libinit$$00000000) for __rt_lib_init
+    rtentry2.o(.ARM.Collect$$rtentry$$0000000B) refers to boardinit3.o(.text) for _platform_post_lib_init
+    rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to media.o(.text) for main
+    rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to exit.o(.text) for exit
+    rtentry2.o(.ARM.exidx) refers to rtentry2.o(.ARM.Collect$$rtentry$$00000001) for .ARM.Collect$$rtentry$$00000001
+    rtentry2.o(.ARM.exidx) refers to rtentry2.o(.ARM.Collect$$rtentry$$00000008) for .ARM.Collect$$rtentry$$00000008
+    rtentry2.o(.ARM.exidx) refers to rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for .ARM.Collect$$rtentry$$0000000A
+    rtentry2.o(.ARM.exidx) refers to rtentry2.o(.ARM.Collect$$rtentry$$0000000B) for .ARM.Collect$$rtentry$$0000000B
+    rtentry2.o(.ARM.exidx) refers to rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for .ARM.Collect$$rtentry$$0000000D
+    rtentry4.o(.ARM.Collect$$rtentry$$00000004) refers to sys_stackheap_outer.o(.text) for __user_setup_stackheap
+    rtentry4.o(.ARM.exidx) refers to rtentry4.o(.ARM.Collect$$rtentry$$00000004) for .ARM.Collect$$rtentry$$00000004
+    rt_div0.o(.text) refers to defsig_fpe_outer.o(.text) for __rt_SIGFPE
+    sys_stackheap_outer.o(.text) refers to libspace.o(.text) for __user_perproc_libspace
+    sys_stackheap_outer.o(.text) refers to startup_lpc17xx.o(.text) for __user_initial_stackheap
+    exit.o(.text) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for __rt_exit
+    defsig_fpe_outer.o(.text) refers to defsig_fpe_inner.o(.text) for __rt_SIGFPE_inner
+    defsig_fpe_outer.o(.text) refers to defsig_exit.o(.text) for __sig_exit
+    defsig_fpe_formal.o(.text) refers to rt_raise.o(.text) for __rt_raise
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000002C) for __rt_lib_init_alloca_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000002A) for __rt_lib_init_argv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000019) for __rt_lib_init_atexit_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001F) for __rt_lib_init_clock_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000030) for __rt_lib_init_cpp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000002E) for __rt_lib_init_exceptions_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000002) for __rt_lib_init_fp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001D) for __rt_lib_init_fp_trap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000021) for __rt_lib_init_getenv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000008) for __rt_lib_init_heap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000F) for __rt_lib_init_lc_collate_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000011) for __rt_lib_init_lc_ctype_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000013) for __rt_lib_init_lc_monetary_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000015) for __rt_lib_init_lc_numeric_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000017) for __rt_lib_init_lc_time_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000C) for __rt_lib_init_rand_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000031) for __rt_lib_init_return
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001B) for __rt_lib_init_signal_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000023) for __rt_lib_init_stdio_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000A) for __rt_lib_init_user_alloc_1
+    libspace.o(.text) refers to libspace.o(.bss) for __libspace_start
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for .ARM.Collect$$rtexit$$00000000
+    rt_raise.o(.text) refers to __raise.o(.text) for __raise
+    rt_raise.o(.text) refers to sys_exit.o(.text) for _sys_exit
+    defsig_exit.o(.text) refers to sys_exit.o(.text) for _sys_exit
+    defsig_fpe_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    libinit2.o(.ARM.Collect$$libinit$$0000000E) refers to libinit2.o(.ARM.Collect$$libinit$$0000000D) for .ARM.Collect$$libinit$$0000000D
+    libinit2.o(.ARM.Collect$$libinit$$00000010) refers to libinit2.o(.ARM.Collect$$libinit$$0000000D) for .ARM.Collect$$libinit$$0000000D
+    libinit2.o(.ARM.Collect$$libinit$$00000012) refers to libinit2.o(.ARM.Collect$$libinit$$0000000D) for .ARM.Collect$$libinit$$0000000D
+    libinit2.o(.ARM.Collect$$libinit$$00000014) refers to libinit2.o(.ARM.Collect$$libinit$$0000000D) for .ARM.Collect$$libinit$$0000000D
+    libinit2.o(.ARM.Collect$$libinit$$00000016) refers to libinit2.o(.ARM.Collect$$libinit$$0000000D) for .ARM.Collect$$libinit$$0000000D
+    libinit2.o(.ARM.Collect$$libinit$$00000024) refers to argv_veneer.o(.emb_text) for __ARM_argv_veneer
+    libinit2.o(.ARM.Collect$$libinit$$00000025) refers to argv_veneer.o(.emb_text) for __ARM_argv_veneer
+    sys_exit.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_exit.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    rtexit2.o(.ARM.Collect$$rtexit$$00000003) refers to libshutdown.o(.ARM.Collect$$libshutdown$$00000000) for __rt_lib_shutdown
+    rtexit2.o(.ARM.Collect$$rtexit$$00000004) refers to sys_exit.o(.text) for _sys_exit
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000001) for .ARM.Collect$$rtexit$$00000001
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for .ARM.Collect$$rtexit$$00000003
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for .ARM.Collect$$rtexit$$00000004
+    __raise.o(.text) refers to defsig.o(CL$$defsig) for __default_signal_handler
+    defsig_general.o(.text) refers to sys_wrch.o(.text) for _ttywrch
+    argv_veneer.o(.emb_text) refers to no_argv.o(.text) for __ARM_get_argv
+    sys_wrch.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_wrch.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    defsig.o(CL$$defsig) refers to defsig_fpe_inner.o(.text) for __rt_SIGFPE_inner
+    defsig.o(CL$$defsig) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    _get_argv_nomalloc.o(.text) refers (Special) to hrguard.o(.text) for __heap_region$guard
+    _get_argv_nomalloc.o(.text) refers to defsig_rtmem_outer.o(.text) for __rt_SIGRTMEM
+    _get_argv_nomalloc.o(.text) refers to sys_command.o(.text) for _sys_command_string
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000006) for __rt_lib_shutdown_fp_trap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000E) for __rt_lib_shutdown_heap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F) for __rt_lib_shutdown_return
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000009) for __rt_lib_shutdown_signal_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000003) for __rt_lib_shutdown_stdio_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000B) for __rt_lib_shutdown_user_alloc_1
+    sys_command.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_command.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    defsig_abrt_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_rtred_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_rtmem_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_rtmem_outer.o(.text) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    defsig_rtmem_outer.o(.text) refers to defsig_exit.o(.text) for __sig_exit
+    defsig_rtmem_formal.o(.text) refers to rt_raise.o(.text) for __rt_raise
+    defsig_stak_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_pvfn_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_cppl_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_segv_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_other.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    usbcore.o(i.USB_ReqSetClrFeature) refers to usbhw.o(.text) for USB_WakeUpCfg
+    usbcore.o(i.USB_ReqSetClrFeature) refers to usbcore.o(.data) for .data
+    usbcore.o(i.USB_ReqSetConfiguration) refers to usbhw.o(.text) for USB_DisableEP
+    usbcore.o(i.USB_ReqSetConfiguration) refers to usbcore.o(.data) for .data
+    usbcore.o(i.USB_ReqSetConfiguration) refers to usbdesc.o(.constdata) for USB_ConfigDescriptor
+    usbcore.o(i.USB_ReqSetInterface) refers to usbhw.o(.text) for USB_ConfigEP
+    usbcore.o(i.USB_ReqSetInterface) refers to usbcore.o(.data) for .data
+    usbcore.o(i.USB_ReqSetInterface) refers to usbdesc.o(.constdata) for USB_ConfigDescriptor
+    usbcore.o(i.USB_ReqGetStatus) refers to usbcore.o(.data) for .data
+    usbcore.o(i.USB_ReqGetStatus) refers to usbcore.o(.bss) for .bss
+    usbcore.o(i.USB_ReqGetDescriptor) refers to usbcore.o(.data) for .data
+    usbcore.o(i.USB_ReqGetDescriptor) refers to usbdesc.o(.constdata) for USB_DeviceDescriptor
+    usbcore.o(i.USB_ReqGetDescriptor) refers to usbdesc.o(.constdata) for USB_ConfigDescriptor
+    usbcore.o(i.USB_ReqGetDescriptor) refers to usbdesc.o(.constdata) for USB_StringDescriptor
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing adcuser.o(.constdata), (2 bytes).
+    Removing adcuser.o(.constdata), (2 bytes).
+    Removing adcuser.o(.constdata), (2 bytes).
+    Removing usbhw.o(USB_RAM), (256 bytes).
+    Removing usbhw.o(USB_RAM), (160 bytes).
+    Removing kbd.o(.rev16_text), (4 bytes).
+    Removing kbd.o(.revsh_text), (4 bytes).
+    Removing kbd.o(.data), (4 bytes).
+    Removing glcd_spi_lpc1700.o(.rev16_text), (4 bytes).
+    Removing glcd_spi_lpc1700.o(.revsh_text), (4 bytes).
+    Removing tetris.o(.text), (2 bytes).
+    Removing core_cm3.o(.emb_text), (32 bytes).
+    Removing toronto.o(.constdata), (135001 bytes).
+    Removing jays.o(.constdata), (98305 bytes).
+    Removing yellow.o(.constdata), (513 bytes).
+    Removing red.o(.constdata), (513 bytes).
+    Removing red2.o(.constdata), (513 bytes).
+
+17 unused section(s) (total 235321 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    RESET                                    0x00000000   Section      204  startup_lpc17xx.o(RESET)
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit3.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardshut.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit1.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit2.o ABSOLUTE
+    ../clib/angel/dczerorl2.s                0x00000000   Number         0  __dczerorl2.o ABSOLUTE
+    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_zi.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtentry2.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit2.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtentry.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtentry4.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  aeabi_ldiv0_sigfpe.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  aeabi_ldiv0.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_div0.o ABSOLUTE
+    ../clib/angel/scatter.s                  0x00000000   Number         0  __scatter.o ABSOLUTE
+    ../clib/angel/startup.s                  0x00000000   Number         0  __main.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  indicate_semi.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  sys_stackheap_outer.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  libspace.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_wrch.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_exit.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  no_argv.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  _get_argv_nomalloc.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
+    ../clib/heapalloc.c                      0x00000000   Number         0  hrguard.o ABSOLUTE
+    ../clib/heapaux.c                        0x00000000   Number         0  heapauxi.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
+    ../clib/longlong.s                       0x00000000   Number         0  lludivv7m.o ABSOLUTE
+    ../clib/memcpset.s                       0x00000000   Number         0  rt_memcpy_w.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_dec.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __2sprintf.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_flags.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_ss.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_flags_ss.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_wp.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_flags_wp.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_ss_wp.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_nopercent.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  noretval__2sprintf.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_flags_ss_wp.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _sputc.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_char_common.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_intcommon.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf.o ABSOLUTE
+    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_d.o ABSOLUTE
+    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_percent_end.o ABSOLUTE
+    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_percent.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_general.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_formal.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_cppl_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
+    ../clib/signal.s                         0x00000000   Number         0  defsig.o ABSOLUTE
+    ../clib/stdlib.c                         0x00000000   Number         0  exit.o ABSOLUTE
+    ../fplib/fpinit.s                        0x00000000   Number         0  fpinit.o ABSOLUTE
+    ADC.c                                    0x00000000   Number         0  adc.o ABSOLUTE
+    GLCD_SPI_LPC1700.c                       0x00000000   Number         0  glcd_spi_lpc1700.o ABSOLUTE
+    GLCD_SPI_LPC1700.c                       0x00000000   Number         0  glcd_spi_lpc1700.o ABSOLUTE
+    Gallery.c                                0x00000000   Number         0  gallery.o ABSOLUTE
+    GalleryBlur.c                            0x00000000   Number         0  galleryblur.o ABSOLUTE
+    IRQ.c                                    0x00000000   Number         0  irq.o ABSOLUTE
+    KBD.c                                    0x00000000   Number         0  kbd.o ABSOLUTE
+    KBD.c                                    0x00000000   Number         0  kbd.o ABSOLUTE
+    LED.c                                    0x00000000   Number         0  led.o ABSOLUTE
+    RED.c                                    0x00000000   Number         0  red.o ABSOLUTE
+    YELLOW.c                                 0x00000000   Number         0  yellow.o ABSOLUTE
+    adcuser.c                                0x00000000   Number         0  adcuser.o ABSOLUTE
+    audioImage.c                             0x00000000   Number         0  audioimage.o ABSOLUTE
+    audioImageBlur.c                         0x00000000   Number         0  audioimageblur.o ABSOLUTE
+    blubox.c                                 0x00000000   Number         0  blubox.o ABSOLUTE
+    computers.c                              0x00000000   Number         0  computers.o ABSOLUTE
+    core_cm3.c                               0x00000000   Number         0  core_cm3.o ABSOLUTE
+    core_cm3.c                               0x00000000   Number         0  core_cm3.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    jays.c                                   0x00000000   Number         0  jays.o ABSOLUTE
+    mainBack.c                               0x00000000   Number         0  mainback.o ABSOLUTE
+    media.c                                  0x00000000   Number         0  media.o ABSOLUTE
+    player.c                                 0x00000000   Number         0  player.o ABSOLUTE
+    red2.c                                   0x00000000   Number         0  red2.o ABSOLUTE
+    startup_LPC17xx.s                        0x00000000   Number         0  startup_lpc17xx.o ABSOLUTE
+    system_LPC17xx.c                         0x00000000   Number         0  system_lpc17xx.o ABSOLUTE
+    tetris.c                                 0x00000000   Number         0  tetris.o ABSOLUTE
+    toronto.c                                0x00000000   Number         0  toronto.o ABSOLUTE
+    tretris.c                                0x00000000   Number         0  tretris.o ABSOLUTE
+    tretrisBlur.c                            0x00000000   Number         0  tretrisblur.o ABSOLUTE
+    usbcore.c                                0x00000000   Number         0  usbcore.o ABSOLUTE
+    usbdesc.c                                0x00000000   Number         0  usbdesc.o ABSOLUTE
+    usbdmain.c                               0x00000000   Number         0  usbdmain.o ABSOLUTE
+    usbhw.c                                  0x00000000   Number         0  usbhw.o ABSOLUTE
+    usbuser.c                                0x00000000   Number         0  usbuser.o ABSOLUTE
+    yellow2.c                                0x00000000   Number         0  yellow2.o ABSOLUTE
+    !!!main                                  0x000000cc   Section        8  __main.o(!!!main)
+    !!!scatter                               0x000000d4   Section       52  __scatter.o(!!!scatter)
+    !!dczerorl2                              0x00000108   Section       90  __dczerorl2.o(!!dczerorl2)
+    !!handler_zi                             0x00000164   Section       28  __scatter_zi.o(!!handler_zi)
+    .ARM.Collect$$_printf_percent$$00000000  0x00000180   Section        0  _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000)
+    .ARM.Collect$$_printf_percent$$00000009  0x00000180   Section        6  _printf_d.o(.ARM.Collect$$_printf_percent$$00000009)
+    .ARM.Collect$$_printf_percent$$00000017  0x00000186   Section        4  _printf_percent_end.o(.ARM.Collect$$_printf_percent$$00000017)
+    .ARM.Collect$$libinit$$00000000          0x0000018a   Section        2  libinit.o(.ARM.Collect$$libinit$$00000000)
+    .ARM.Collect$$libinit$$00000002          0x0000018c   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000002)
+    .ARM.Collect$$libinit$$00000008          0x0000018c   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000008)
+    .ARM.Collect$$libinit$$0000000A          0x0000018c   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000A)
+    .ARM.Collect$$libinit$$0000000C          0x0000018c   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000C)
+    .ARM.Collect$$libinit$$0000000F          0x0000018c   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000F)
+    .ARM.Collect$$libinit$$00000011          0x0000018c   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000011)
+    .ARM.Collect$$libinit$$00000013          0x0000018c   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000013)
+    .ARM.Collect$$libinit$$00000015          0x0000018c   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000015)
+    .ARM.Collect$$libinit$$00000017          0x0000018c   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000017)
+    .ARM.Collect$$libinit$$00000019          0x0000018c   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000019)
+    .ARM.Collect$$libinit$$0000001B          0x0000018c   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001B)
+    .ARM.Collect$$libinit$$0000001D          0x0000018c   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001D)
+    .ARM.Collect$$libinit$$0000001F          0x0000018c   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001F)
+    .ARM.Collect$$libinit$$00000021          0x0000018c   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000021)
+    .ARM.Collect$$libinit$$00000023          0x0000018c   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000023)
+    .ARM.Collect$$libinit$$0000002A          0x0000018c   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000002A)
+    .ARM.Collect$$libinit$$0000002C          0x0000018c   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000002C)
+    .ARM.Collect$$libinit$$0000002E          0x0000018c   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000002E)
+    .ARM.Collect$$libinit$$00000030          0x0000018c   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000030)
+    .ARM.Collect$$libinit$$00000031          0x0000018c   Section        2  libinit2.o(.ARM.Collect$$libinit$$00000031)
+    .ARM.Collect$$libshutdown$$00000000      0x0000018e   Section        2  libshutdown.o(.ARM.Collect$$libshutdown$$00000000)
+    .ARM.Collect$$libshutdown$$00000003      0x00000190   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000003)
+    .ARM.Collect$$libshutdown$$00000006      0x00000190   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000006)
+    .ARM.Collect$$libshutdown$$00000009      0x00000190   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000009)
+    .ARM.Collect$$libshutdown$$0000000B      0x00000190   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000B)
+    .ARM.Collect$$libshutdown$$0000000E      0x00000190   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000E)
+    .ARM.Collect$$libshutdown$$0000000F      0x00000190   Section        2  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F)
+    .ARM.Collect$$rtentry$$00000000          0x00000192   Section        0  rtentry.o(.ARM.Collect$$rtentry$$00000000)
+    .ARM.Collect$$rtentry$$00000002          0x00000192   Section        0  rtentry2.o(.ARM.Collect$$rtentry$$00000002)
+    .ARM.Collect$$rtentry$$00000004          0x00000192   Section        6  rtentry4.o(.ARM.Collect$$rtentry$$00000004)
+    .ARM.Collect$$rtentry$$00000009          0x00000198   Section        0  rtentry2.o(.ARM.Collect$$rtentry$$00000009)
+    .ARM.Collect$$rtentry$$0000000A          0x00000198   Section        4  rtentry2.o(.ARM.Collect$$rtentry$$0000000A)
+    .ARM.Collect$$rtentry$$0000000C          0x0000019c   Section        0  rtentry2.o(.ARM.Collect$$rtentry$$0000000C)
+    .ARM.Collect$$rtentry$$0000000D          0x0000019c   Section        8  rtentry2.o(.ARM.Collect$$rtentry$$0000000D)
+    .ARM.Collect$$rtexit$$00000000           0x000001a4   Section        2  rtexit.o(.ARM.Collect$$rtexit$$00000000)
+    .ARM.Collect$$rtexit$$00000002           0x000001a6   Section        0  rtexit2.o(.ARM.Collect$$rtexit$$00000002)
+    .ARM.Collect$$rtexit$$00000003           0x000001a6   Section        4  rtexit2.o(.ARM.Collect$$rtexit$$00000003)
+    .ARM.Collect$$rtexit$$00000004           0x000001aa   Section        6  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
+    .text                                    0x000001b0   Section       60  startup_lpc17xx.o(.text)
+    .text                                    0x000001ec   Section        0  adcuser.o(.text)
+    .text                                    0x00000298   Section        0  kbd.o(.text)
+    .text                                    0x000002e4   Section        0  heapauxi.o(.text)
+    .text                                    0x000002ea   Section        0  _sputc.o(.text)
+    .text                                    0x000002f4   Section        8  libspace.o(.text)
+    .ARM.__at_0x02FC                         0x000002fc   Section        4  startup_lpc17xx.o(.ARM.__at_0x02FC)
+    .text                                    0x00000300   Section        0  usbcore.o(.text)
+    .text                                    0x0000053c   Section        0  usbhw.o(.text)
+    .text                                    0x00000bcc   Section        0  usbuser.o(.text)
+    .text                                    0x00000c78   Section        0  adc.o(.text)
+    .text                                    0x00000d0c   Section        0  glcd_spi_lpc1700.o(.text)
+    spi_tran_man                             0x00000d0d   Thumb Code   106  glcd_spi_lpc1700.o(.text)
+    delay                                    0x0000165f   Thumb Code     8  glcd_spi_lpc1700.o(.text)
+    spi_tran                                 0x00001667   Thumb Code    16  glcd_spi_lpc1700.o(.text)
+    wr_cmd                                   0x00001677   Thumb Code    32  glcd_spi_lpc1700.o(.text)
+    wr_dat                                   0x00001697   Thumb Code    32  glcd_spi_lpc1700.o(.text)
+    wr_dat_start                             0x000016b7   Thumb Code    10  glcd_spi_lpc1700.o(.text)
+    wr_dat_only                              0x000016c1   Thumb Code    18  glcd_spi_lpc1700.o(.text)
+    wr_reg                                   0x000016d3   Thumb Code    16  glcd_spi_lpc1700.o(.text)
+    rd_id_man                                0x000016e3   Thumb Code   130  glcd_spi_lpc1700.o(.text)
+    .text                                    0x00001764   Section        0  irq.o(.text)
+    .text                                    0x000017b0   Section        0  led.o(.text)
+    .text                                    0x00001838   Section        0  media.o(.text)
+    NVIC_DisableIRQ                          0x00002043   Thumb Code    24  media.o(.text)
+    .text                                    0x000020a8   Section        0  system_lpc17xx.o(.text)
+    .text                                    0x00002308   Section      238  lludivv7m.o(.text)
+    .text                                    0x000023f8   Section        0  noretval__2sprintf.o(.text)
+    .text                                    0x00002420   Section        0  __printf.o(.text)
+    .text                                    0x00002488   Section        0  _printf_dec.o(.text)
+    .text                                    0x00002500   Section      100  rt_memcpy_w.o(.text)
+    .text                                    0x00002564   Section        0  _printf_intcommon.o(.text)
+    .text                                    0x0000261c   Section        0  _printf_char_common.o(.text)
+    _printf_input_char                       0x0000261d   Thumb Code    10  _printf_char_common.o(.text)
+    .text                                    0x0000264c   Section       74  sys_stackheap_outer.o(.text)
+    .text                                    0x00002696   Section        0  exit.o(.text)
+    .text                                    0x000026a4   Section        0  sys_exit.o(.text)
+    .text                                    0x000026b0   Section        2  use_no_semi.o(.text)
+    .text                                    0x000026b2   Section        0  indicate_semi.o(.text)
+    i.USB_ReqGetDescriptor                   0x000026b4   Section        0  usbcore.o(i.USB_ReqGetDescriptor)
+    i.USB_ReqGetStatus                       0x0000273c   Section        0  usbcore.o(i.USB_ReqGetStatus)
+    i.USB_ReqSetClrFeature                   0x000027b8   Section        0  usbcore.o(i.USB_ReqSetClrFeature)
+    i.USB_ReqSetConfiguration                0x00002850   Section        0  usbcore.o(i.USB_ReqSetConfiguration)
+    i.USB_ReqSetInterface                    0x000029b0   Section        0  usbcore.o(i.USB_ReqSetInterface)
+    .constdata                               0x00002ab0   Section       18  usbdesc.o(.constdata)
+    .constdata                               0x00002ac2   Section      110  usbdesc.o(.constdata)
+    .constdata                               0x00002b30   Section      100  usbdesc.o(.constdata)
+    .constdata                               0x00002b94   Section       16  usbhw.o(.constdata)
+    .constdata                               0x00002ba4   Section       64  usbuser.o(.constdata)
+    .constdata                               0x00002be4   Section     6272  glcd_spi_lpc1700.o(.constdata)
+    .constdata                               0x00004464   Section       32  led.o(.constdata)
+    .constdata                               0x00004484   Section    153601  computers.o(.constdata)
+    .constdata                               0x00029c85   Section      513  blubox.o(.constdata)
+    .constdata                               0x00029e86   Section    13825  audioimageblur.o(.constdata)
+    .constdata                               0x0002d487   Section    13825  audioimage.o(.constdata)
+    .constdata                               0x00030a88   Section    13825  tretrisblur.o(.constdata)
+    .constdata                               0x00034089   Section    13825  tretris.o(.constdata)
+    .constdata                               0x0003768a   Section    13825  galleryblur.o(.constdata)
+    .constdata                               0x0003ac8b   Section    13825  gallery.o(.constdata)
+    .constdata                               0x0003e28c   Section    153601  mainback.o(.constdata)
+    .constdata                               0x00063a8d   Section    64001  player.o(.constdata)
+    .constdata                               0x0007348e   Section      513  yellow2.o(.constdata)
+    .data                                    0x10000000   Section        2  adcuser.o(.data)
+    .data                                    0x10000004   Section       40  usbcore.o(.data)
+    .data                                    0x1000002c   Section        8  usbhw.o(.data)
+    .data                                    0x10000034   Section        4  adc.o(.data)
+    .data                                    0x10000038   Section        6  glcd_spi_lpc1700.o(.data)
+    Himax                                    0x10000038   Data           1  glcd_spi_lpc1700.o(.data)
+    Color                                    0x1000003a   Data           4  glcd_spi_lpc1700.o(.data)
+    .data                                    0x10000040   Section       16  irq.o(.data)
+    ticks                                    0x10000044   Data           4  irq.o(.data)
+    timetick                                 0x10000048   Data           4  irq.o(.data)
+    leds                                     0x1000004c   Data           4  irq.o(.data)
+    .data                                    0x10000050   Section        4  media.o(.data)
+    .data                                    0x10000054   Section      340  media.o(.data)
+    .data                                    0x100001a8   Section        8  system_lpc17xx.o(.data)
+    .bss                                     0x100001b0   Section       64  usbcore.o(.bss)
+    .bss                                     0x100001f0   Section      128  usbhw.o(.bss)
+    .bss                                     0x10000270   Section      160  media.o(.bss)
+    .bss                                     0x10000310   Section       96  libspace.o(.bss)
+    HEAP                                     0x10000370   Section        0  startup_lpc17xx.o(HEAP)
+    STACK                                    0x10000370   Section      512  startup_lpc17xx.o(STACK)
+    Heap_Mem                                 0x10000370   Data           0  startup_lpc17xx.o(HEAP)
+    Stack_Mem                                0x10000370   Data         512  startup_lpc17xx.o(STACK)
+    USB_RAM                                  0x10000570   Section      128  usbhw.o(USB_RAM)
+    __initial_sp                             0x10000570   Data           0  startup_lpc17xx.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$P$D$K$B$S$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$ROPI$EBA8$UX$STANDARDLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  media.o ABSOLUTE
+    __Vectors                                0x00000000   Data           4  startup_lpc17xx.o(RESET)
+    __ARM_exceptions_init                     - Undefined Weak Reference
+    __alloca_initialize                       - Undefined Weak Reference
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __rt_locale                               - Undefined Weak Reference
+    __sigvec_lookup                           - Undefined Weak Reference
+    _atexit_init                              - Undefined Weak Reference
+    _call_atexit_fns                          - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _fp_trap_init                             - Undefined Weak Reference
+    _fp_trap_shutdown                         - Undefined Weak Reference
+    _get_lc_collate                           - Undefined Weak Reference
+    _get_lc_ctype                             - Undefined Weak Reference
+    _get_lc_monetary                          - Undefined Weak Reference
+    _get_lc_numeric                           - Undefined Weak Reference
+    _get_lc_time                              - Undefined Weak Reference
+    _getenv_init                              - Undefined Weak Reference
+    _handle_redirection                       - Undefined Weak Reference
+    _init_alloc                               - Undefined Weak Reference
+    _init_user_alloc                          - Undefined Weak Reference
+    _initio                                   - Undefined Weak Reference
+    _printf_post_padding                      - Undefined Weak Reference
+    _printf_pre_padding                       - Undefined Weak Reference
+    _printf_truncate_signed                   - Undefined Weak Reference
+    _printf_truncate_unsigned                 - Undefined Weak Reference
+    _rand_init                                - Undefined Weak Reference
+    _signal_finish                            - Undefined Weak Reference
+    _signal_init                              - Undefined Weak Reference
+    _terminate_alloc                          - Undefined Weak Reference
+    _terminate_user_alloc                     - Undefined Weak Reference
+    _terminateio                              - Undefined Weak Reference
+    __main                                   0x000000cd   Thumb Code     8  __main.o(!!!main)
+    __scatterload                            0x000000d5   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_rt2                        0x000000d5   Thumb Code    44  __scatter.o(!!!scatter)
+    __scatterload_rt2_thumb_only             0x000000d5   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_null                       0x000000e3   Thumb Code     0  __scatter.o(!!!scatter)
+    __decompress                             0x00000109   Thumb Code    90  __dczerorl2.o(!!dczerorl2)
+    __decompress1                            0x00000109   Thumb Code     0  __dczerorl2.o(!!dczerorl2)
+    __scatterload_zeroinit                   0x00000165   Thumb Code    28  __scatter_zi.o(!!handler_zi)
+    _printf_d                                0x00000181   Thumb Code     0  _printf_d.o(.ARM.Collect$$_printf_percent$$00000009)
+    _printf_percent                          0x00000181   Thumb Code     0  _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000)
+    _printf_percent_end                      0x00000187   Thumb Code     0  _printf_percent_end.o(.ARM.Collect$$_printf_percent$$00000017)
+    __rt_lib_init                            0x0000018b   Thumb Code     0  libinit.o(.ARM.Collect$$libinit$$00000000)
+    __rt_lib_init_alloca_1                   0x0000018d   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000002C)
+    __rt_lib_init_argv_1                     0x0000018d   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000002A)
+    __rt_lib_init_atexit_1                   0x0000018d   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000019)
+    __rt_lib_init_clock_1                    0x0000018d   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001F)
+    __rt_lib_init_cpp_1                      0x0000018d   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000030)
+    __rt_lib_init_exceptions_1               0x0000018d   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000002E)
+    __rt_lib_init_fp_1                       0x0000018d   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000002)
+    __rt_lib_init_fp_trap_1                  0x0000018d   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001D)
+    __rt_lib_init_getenv_1                   0x0000018d   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000021)
+    __rt_lib_init_heap_1                     0x0000018d   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000008)
+    __rt_lib_init_lc_collate_1               0x0000018d   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000F)
+    __rt_lib_init_lc_ctype_1                 0x0000018d   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000011)
+    __rt_lib_init_lc_monetary_1              0x0000018d   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000013)
+    __rt_lib_init_lc_numeric_1               0x0000018d   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000015)
+    __rt_lib_init_lc_time_1                  0x0000018d   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000017)
+    __rt_lib_init_rand_1                     0x0000018d   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000C)
+    __rt_lib_init_return                     0x0000018d   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000031)
+    __rt_lib_init_signal_1                   0x0000018d   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001B)
+    __rt_lib_init_stdio_1                    0x0000018d   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000023)
+    __rt_lib_init_user_alloc_1               0x0000018d   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000A)
+    __rt_lib_shutdown                        0x0000018f   Thumb Code     0  libshutdown.o(.ARM.Collect$$libshutdown$$00000000)
+    __rt_lib_shutdown_fp_trap_1              0x00000191   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000006)
+    __rt_lib_shutdown_heap_1                 0x00000191   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000E)
+    __rt_lib_shutdown_return                 0x00000191   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F)
+    __rt_lib_shutdown_signal_1               0x00000191   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000009)
+    __rt_lib_shutdown_stdio_1                0x00000191   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000003)
+    __rt_lib_shutdown_user_alloc_1           0x00000191   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000B)
+    __rt_entry                               0x00000193   Thumb Code     0  rtentry.o(.ARM.Collect$$rtentry$$00000000)
+    __rt_entry_presh_1                       0x00000193   Thumb Code     0  rtentry2.o(.ARM.Collect$$rtentry$$00000002)
+    __rt_entry_sh                            0x00000193   Thumb Code     0  rtentry4.o(.ARM.Collect$$rtentry$$00000004)
+    __rt_entry_li                            0x00000199   Thumb Code     0  rtentry2.o(.ARM.Collect$$rtentry$$0000000A)
+    __rt_entry_postsh_1                      0x00000199   Thumb Code     0  rtentry2.o(.ARM.Collect$$rtentry$$00000009)
+    __rt_entry_main                          0x0000019d   Thumb Code     0  rtentry2.o(.ARM.Collect$$rtentry$$0000000D)
+    __rt_entry_postli_1                      0x0000019d   Thumb Code     0  rtentry2.o(.ARM.Collect$$rtentry$$0000000C)
+    __rt_exit                                0x000001a5   Thumb Code     0  rtexit.o(.ARM.Collect$$rtexit$$00000000)
+    __rt_exit_ls                             0x000001a7   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000003)
+    __rt_exit_prels_1                        0x000001a7   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000002)
+    __rt_exit_exit                           0x000001ab   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
+    Reset_Handler                            0x000001b1   Thumb Code     8  startup_lpc17xx.o(.text)
+    NMI_Handler                              0x000001b9   Thumb Code     2  startup_lpc17xx.o(.text)
+    HardFault_Handler                        0x000001bb   Thumb Code     2  startup_lpc17xx.o(.text)
+    MemManage_Handler                        0x000001bd   Thumb Code     2  startup_lpc17xx.o(.text)
+    BusFault_Handler                         0x000001bf   Thumb Code     2  startup_lpc17xx.o(.text)
+    UsageFault_Handler                       0x000001c1   Thumb Code     2  startup_lpc17xx.o(.text)
+    SVC_Handler                              0x000001c3   Thumb Code     2  startup_lpc17xx.o(.text)
+    DebugMon_Handler                         0x000001c5   Thumb Code     2  startup_lpc17xx.o(.text)
+    PendSV_Handler                           0x000001c7   Thumb Code     2  startup_lpc17xx.o(.text)
+    BOD_IRQHandler                           0x000001cb   Thumb Code     0  startup_lpc17xx.o(.text)
+    CANActivity_IRQHandler                   0x000001cb   Thumb Code     0  startup_lpc17xx.o(.text)
+    CAN_IRQHandler                           0x000001cb   Thumb Code     0  startup_lpc17xx.o(.text)
+    DMA_IRQHandler                           0x000001cb   Thumb Code     0  startup_lpc17xx.o(.text)
+    EINT0_IRQHandler                         0x000001cb   Thumb Code     0  startup_lpc17xx.o(.text)
+    EINT1_IRQHandler                         0x000001cb   Thumb Code     0  startup_lpc17xx.o(.text)
+    EINT2_IRQHandler                         0x000001cb   Thumb Code     0  startup_lpc17xx.o(.text)
+    EINT3_IRQHandler                         0x000001cb   Thumb Code     0  startup_lpc17xx.o(.text)
+    ENET_IRQHandler                          0x000001cb   Thumb Code     0  startup_lpc17xx.o(.text)
+    I2C0_IRQHandler                          0x000001cb   Thumb Code     0  startup_lpc17xx.o(.text)
+    I2C1_IRQHandler                          0x000001cb   Thumb Code     0  startup_lpc17xx.o(.text)
+    I2C2_IRQHandler                          0x000001cb   Thumb Code     0  startup_lpc17xx.o(.text)
+    I2S_IRQHandler                           0x000001cb   Thumb Code     0  startup_lpc17xx.o(.text)
+    MCPWM_IRQHandler                         0x000001cb   Thumb Code     0  startup_lpc17xx.o(.text)
+    PLL0_IRQHandler                          0x000001cb   Thumb Code     0  startup_lpc17xx.o(.text)
+    PLL1_IRQHandler                          0x000001cb   Thumb Code     0  startup_lpc17xx.o(.text)
+    PWM1_IRQHandler                          0x000001cb   Thumb Code     0  startup_lpc17xx.o(.text)
+    QEI_IRQHandler                           0x000001cb   Thumb Code     0  startup_lpc17xx.o(.text)
+    RIT_IRQHandler                           0x000001cb   Thumb Code     0  startup_lpc17xx.o(.text)
+    RTC_IRQHandler                           0x000001cb   Thumb Code     0  startup_lpc17xx.o(.text)
+    SPI_IRQHandler                           0x000001cb   Thumb Code     0  startup_lpc17xx.o(.text)
+    SSP0_IRQHandler                          0x000001cb   Thumb Code     0  startup_lpc17xx.o(.text)
+    SSP1_IRQHandler                          0x000001cb   Thumb Code     0  startup_lpc17xx.o(.text)
+    TIMER1_IRQHandler                        0x000001cb   Thumb Code     0  startup_lpc17xx.o(.text)
+    TIMER2_IRQHandler                        0x000001cb   Thumb Code     0  startup_lpc17xx.o(.text)
+    TIMER3_IRQHandler                        0x000001cb   Thumb Code     0  startup_lpc17xx.o(.text)
+    UART0_IRQHandler                         0x000001cb   Thumb Code     0  startup_lpc17xx.o(.text)
+    UART1_IRQHandler                         0x000001cb   Thumb Code     0  startup_lpc17xx.o(.text)
+    UART2_IRQHandler                         0x000001cb   Thumb Code     0  startup_lpc17xx.o(.text)
+    UART3_IRQHandler                         0x000001cb   Thumb Code     0  startup_lpc17xx.o(.text)
+    USBActivity_IRQHandler                   0x000001cb   Thumb Code     0  startup_lpc17xx.o(.text)
+    WDT_IRQHandler                           0x000001cb   Thumb Code     0  startup_lpc17xx.o(.text)
+    __user_initial_stackheap                 0x000001cd   Thumb Code     0  startup_lpc17xx.o(.text)
+    ADC_IF_GetRequest                        0x000001ed   Thumb Code    88  adcuser.o(.text)
+    ADC_IF_SetRequest                        0x00000245   Thumb Code    60  adcuser.o(.text)
+    ADC_EP_GetRequest                        0x00000281   Thumb Code     4  adcuser.o(.text)
+    ADC_EP_SetRequest                        0x00000285   Thumb Code     4  adcuser.o(.text)
+    KBD_Init                                 0x00000299   Thumb Code    32  kbd.o(.text)
+    KBD_get                                  0x000002b9   Thumb Code    12  kbd.o(.text)
+    get_button                               0x000002c5   Thumb Code    14  kbd.o(.text)
+    __use_two_region_memory                  0x000002e5   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_escrow$2region                 0x000002e7   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_expand$2region                 0x000002e9   Thumb Code     2  heapauxi.o(.text)
+    _sputc                                   0x000002eb   Thumb Code    10  _sputc.o(.text)
+    __user_libspace                          0x000002f5   Thumb Code     8  libspace.o(.text)
+    __user_perproc_libspace                  0x000002f5   Thumb Code     0  libspace.o(.text)
+    __user_perthread_libspace                0x000002f5   Thumb Code     0  libspace.o(.text)
+    USB_ResetCore                            0x00000301   Thumb Code    22  usbcore.o(.text)
+    USB_SetupStage                           0x00000317   Thumb Code    10  usbcore.o(.text)
+    USB_DataInStage                          0x00000321   Thumb Code    36  usbcore.o(.text)
+    USB_DataOutStage                         0x00000345   Thumb Code    28  usbcore.o(.text)
+    USB_StatusInStage                        0x00000361   Thumb Code    10  usbcore.o(.text)
+    USB_StatusOutStage                       0x0000036b   Thumb Code     8  usbcore.o(.text)
+    USB_EndPoint0                            0x00000373   Thumb Code   450  usbcore.o(.text)
+    EPAdr                                    0x0000053d   Thumb Code    18  usbhw.o(.text)
+    WrCmd                                    0x0000054f   Thumb Code    24  usbhw.o(.text)
+    WrCmdDat                                 0x00000567   Thumb Code    40  usbhw.o(.text)
+    WrCmdEP                                  0x0000058f   Thumb Code    56  usbhw.o(.text)
+    RdCmdDat                                 0x000005c7   Thumb Code    28  usbhw.o(.text)
+    USB_SetAddress                           0x000005e3   Thumb Code    28  usbhw.o(.text)
+    USB_Reset                                0x000005ff   Thumb Code   106  usbhw.o(.text)
+    USB_Init                                 0x00000669   Thumb Code    98  usbhw.o(.text)
+    USB_Connect                              0x000006cb   Thumb Code    16  usbhw.o(.text)
+    USB_Suspend                              0x000006db   Thumb Code     2  usbhw.o(.text)
+    USB_Resume                               0x000006dd   Thumb Code     2  usbhw.o(.text)
+    USB_WakeUp                               0x000006df   Thumb Code    16  usbhw.o(.text)
+    USB_WakeUpCfg                            0x000006ef   Thumb Code     2  usbhw.o(.text)
+    USB_Configure                            0x000006f1   Thumb Code    42  usbhw.o(.text)
+    USB_ConfigEP                             0x0000071b   Thumb Code    56  usbhw.o(.text)
+    USB_DirCtrlEP                            0x00000753   Thumb Code     2  usbhw.o(.text)
+    USB_EnableEP                             0x00000755   Thumb Code    20  usbhw.o(.text)
+    USB_DisableEP                            0x00000769   Thumb Code    20  usbhw.o(.text)
+    USB_ResetEP                              0x0000077d   Thumb Code    20  usbhw.o(.text)
+    USB_SetStallEP                           0x00000791   Thumb Code    20  usbhw.o(.text)
+    USB_ClrStallEP                           0x000007a5   Thumb Code    20  usbhw.o(.text)
+    USB_ClearEPBuf                           0x000007b9   Thumb Code     4  usbhw.o(.text)
+    USB_ReadEP                               0x000007bd   Thumb Code    82  usbhw.o(.text)
+    USB_WriteEP                              0x0000080f   Thumb Code    68  usbhw.o(.text)
+    USB_DMA_Setup                            0x00000853   Thumb Code   314  usbhw.o(.text)
+    USB_DMA_Enable                           0x0000098d   Thumb Code    16  usbhw.o(.text)
+    USB_DMA_Disable                          0x0000099d   Thumb Code    18  usbhw.o(.text)
+    USB_DMA_Status                           0x000009af   Thumb Code    70  usbhw.o(.text)
+    USB_DMA_BufAdr                           0x000009f5   Thumb Code    24  usbhw.o(.text)
+    USB_DMA_BufCnt                           0x00000a0d   Thumb Code    26  usbhw.o(.text)
+    USB_GetFrame                             0x00000a27   Thumb Code    30  usbhw.o(.text)
+    USB_IRQHandler                           0x00000a45   Thumb Code   358  usbhw.o(.text)
+    USB_Reset_Event                          0x00000bcd   Thumb Code     4  usbuser.o(.text)
+    USB_SOF_Event                            0x00000bd1   Thumb Code     2  usbuser.o(.text)
+    USB_EndPoint1                            0x00000bd3   Thumb Code     2  usbuser.o(.text)
+    USB_EndPoint2                            0x00000bd5   Thumb Code     2  usbuser.o(.text)
+    USB_EndPoint3                            0x00000bd7   Thumb Code   118  usbuser.o(.text)
+    USB_EndPoint4                            0x00000c4d   Thumb Code     2  usbuser.o(.text)
+    USB_EndPoint5                            0x00000c4f   Thumb Code     2  usbuser.o(.text)
+    USB_EndPoint6                            0x00000c51   Thumb Code     2  usbuser.o(.text)
+    USB_EndPoint7                            0x00000c53   Thumb Code     2  usbuser.o(.text)
+    USB_EndPoint8                            0x00000c55   Thumb Code     2  usbuser.o(.text)
+    USB_EndPoint9                            0x00000c57   Thumb Code     2  usbuser.o(.text)
+    USB_EndPoint10                           0x00000c59   Thumb Code     2  usbuser.o(.text)
+    USB_EndPoint11                           0x00000c5b   Thumb Code     2  usbuser.o(.text)
+    USB_EndPoint12                           0x00000c5d   Thumb Code     2  usbuser.o(.text)
+    USB_EndPoint13                           0x00000c5f   Thumb Code     2  usbuser.o(.text)
+    USB_EndPoint14                           0x00000c61   Thumb Code     2  usbuser.o(.text)
+    USB_EndPoint15                           0x00000c63   Thumb Code     2  usbuser.o(.text)
+    ADC_Init                                 0x00000c79   Thumb Code    66  adc.o(.text)
+    ADC_StartCnv                             0x00000cbb   Thumb Code    20  adc.o(.text)
+    ADC_StopCnv                              0x00000ccf   Thumb Code    12  adc.o(.text)
+    ADC_GetCnv                               0x00000cdb   Thumb Code     6  adc.o(.text)
+    ADC_IRQHandler                           0x00000ce1   Thumb Code    24  adc.o(.text)
+    GLCD_Init                                0x00000d77   Thumb Code  1472  glcd_spi_lpc1700.o(.text)
+    GLCD_SetWindow                           0x00001337   Thumb Code   148  glcd_spi_lpc1700.o(.text)
+    GLCD_WindowMax                           0x000013cb   Thumb Code    12  glcd_spi_lpc1700.o(.text)
+    GLCD_PutPixel                            0x000013d7   Thumb Code   118  glcd_spi_lpc1700.o(.text)
+    GLCD_SetTextColor                        0x0000144d   Thumb Code     8  glcd_spi_lpc1700.o(.text)
+    GLCD_SetBackColor                        0x00001455   Thumb Code     8  glcd_spi_lpc1700.o(.text)
+    GLCD_Clear                               0x0000145d   Thumb Code    44  glcd_spi_lpc1700.o(.text)
+    GLCD_DrawChar                            0x00001489   Thumb Code   138  glcd_spi_lpc1700.o(.text)
+    GLCD_DisplayChar                         0x00001513   Thumb Code    66  glcd_spi_lpc1700.o(.text)
+    GLCD_DisplayString                       0x00001555   Thumb Code    36  glcd_spi_lpc1700.o(.text)
+    GLCD_ClearLn                             0x00001579   Thumb Code    72  glcd_spi_lpc1700.o(.text)
+    GLCD_Bargraph                            0x000015c1   Thumb Code    84  glcd_spi_lpc1700.o(.text)
+    GLCD_Bitmap                              0x00001615   Thumb Code    64  glcd_spi_lpc1700.o(.text)
+    GLCD_ScrollVertical                      0x00001655   Thumb Code     2  glcd_spi_lpc1700.o(.text)
+    GLCD_WrCmd                               0x00001657   Thumb Code     4  glcd_spi_lpc1700.o(.text)
+    GLCD_WrReg                               0x0000165b   Thumb Code     4  glcd_spi_lpc1700.o(.text)
+    SysTick_Handler                          0x00001765   Thumb Code    68  irq.o(.text)
+    LED_Init                                 0x000017b1   Thumb Code    30  led.o(.text)
+    LED_On                                   0x000017cf   Thumb Code    28  led.o(.text)
+    LED_Off                                  0x000017eb   Thumb Code    28  led.o(.text)
+    LED_Out                                  0x00001807   Thumb Code    38  led.o(.text)
+    get_potval                               0x00001839   Thumb Code    44  media.o(.text)
+    gamedelay                                0x00001865   Thumb Code    12  media.o(.text)
+    menudelay                                0x00001871   Thumb Code    12  media.o(.text)
+    startScreen                              0x0000187d   Thumb Code    80  media.o(.text)
+    reset                                    0x000018cd   Thumb Code    26  media.o(.text)
+    gallery                                  0x000018e7   Thumb Code   126  media.o(.text)
+    dropBricks                               0x00001965   Thumb Code    94  media.o(.text)
+    clearlines                               0x000019c3   Thumb Code   124  media.o(.text)
+    drawPeice                                0x00001a3f   Thumb Code   146  media.o(.text)
+    x_block_pos                              0x00001ad1   Thumb Code     4  media.o(.text)
+    collision                                0x00001ad5   Thumb Code   132  media.o(.text)
+    gameover                                 0x00001b59   Thumb Code    26  media.o(.text)
+    dropPeice                                0x00001b73   Thumb Code   354  media.o(.text)
+    game_run                                 0x00001cd5   Thumb Code   198  media.o(.text)
+    game_init                                0x00001d9b   Thumb Code    76  media.o(.text)
+    game                                     0x00001de7   Thumb Code    34  media.o(.text)
+    startAudio                               0x00001e09   Thumb Code   154  media.o(.text)
+    startMenu                                0x00001ea3   Thumb Code   206  media.o(.text)
+    TIMER0_IRQHandler                        0x00001f71   Thumb Code   192  media.o(.text)
+    dropAll                                  0x00002031   Thumb Code     2  media.o(.text)
+    main                                     0x00002033   Thumb Code    16  media.o(.text)
+    SystemCoreClockUpdate                    0x000020a9   Thumb Code   194  system_lpc17xx.o(.text)
+    SystemInit                               0x0000216b   Thumb Code   194  system_lpc17xx.o(.text)
+    SystemClockUpdate                        0x0000222d   Thumb Code   188  system_lpc17xx.o(.text)
+    __aeabi_uldivmod                         0x00002309   Thumb Code     0  lludivv7m.o(.text)
+    _ll_udiv                                 0x00002309   Thumb Code   238  lludivv7m.o(.text)
+    __2sprintf                               0x000023f9   Thumb Code    34  noretval__2sprintf.o(.text)
+    __printf                                 0x00002421   Thumb Code   104  __printf.o(.text)
+    _printf_int_dec                          0x00002489   Thumb Code   102  _printf_dec.o(.text)
+    __aeabi_memcpy4                          0x00002501   Thumb Code     0  rt_memcpy_w.o(.text)
+    __aeabi_memcpy8                          0x00002501   Thumb Code     0  rt_memcpy_w.o(.text)
+    __rt_memcpy_w                            0x00002501   Thumb Code   100  rt_memcpy_w.o(.text)
+    _memcpy_lastbytes_aligned                0x00002549   Thumb Code     0  rt_memcpy_w.o(.text)
+    _printf_int_common                       0x00002565   Thumb Code   184  _printf_intcommon.o(.text)
+    _printf_char_common                      0x00002627   Thumb Code    32  _printf_char_common.o(.text)
+    __user_setup_stackheap                   0x0000264d   Thumb Code    74  sys_stackheap_outer.o(.text)
+    exit                                     0x00002697   Thumb Code    12  exit.o(.text)
+    _sys_exit                                0x000026a5   Thumb Code     8  sys_exit.o(.text)
+    __I$use$semihosting                      0x000026b1   Thumb Code     0  use_no_semi.o(.text)
+    __use_no_semihosting_swi                 0x000026b1   Thumb Code     2  use_no_semi.o(.text)
+    __semihosting_library_function           0x000026b3   Thumb Code     0  indicate_semi.o(.text)
+    USB_ReqGetDescriptor                     0x000026b5   Thumb Code   118  usbcore.o(i.USB_ReqGetDescriptor)
+    USB_ReqGetStatus                         0x0000273d   Thumb Code   116  usbcore.o(i.USB_ReqGetStatus)
+    USB_ReqSetClrFeature                     0x000027b9   Thumb Code   146  usbcore.o(i.USB_ReqSetClrFeature)
+    USB_ReqSetConfiguration                  0x00002851   Thumb Code   344  usbcore.o(i.USB_ReqSetConfiguration)
+    USB_ReqSetInterface                      0x000029b1   Thumb Code   248  usbcore.o(i.USB_ReqSetInterface)
+    USB_DeviceDescriptor                     0x00002ab0   Data          18  usbdesc.o(.constdata)
+    USB_ConfigDescriptor                     0x00002ac2   Data         110  usbdesc.o(.constdata)
+    USB_StringDescriptor                     0x00002b30   Data         100  usbdesc.o(.constdata)
+    DDAdr                                    0x00002b94   Data           8  usbhw.o(.constdata)
+    DDSz                                     0x00002b9c   Data           8  usbhw.o(.constdata)
+    USB_P_EP                                 0x00002ba4   Data          64  usbuser.o(.constdata)
+    Font_6x8_h                               0x00002be4   Data         896  glcd_spi_lpc1700.o(.constdata)
+    Font_16x24_h                             0x00002f64   Data        5376  glcd_spi_lpc1700.o(.constdata)
+    led_mask                                 0x00004464   Data          32  led.o(.constdata)
+    computers                                0x00004484   Data       153601  computers.o(.constdata)
+    background                               0x00029c85   Data         513  blubox.o(.constdata)
+    audioImageBlur                           0x00029e86   Data       13825  audioimageblur.o(.constdata)
+    audioImage                               0x0002d487   Data       13825  audioimage.o(.constdata)
+    tetrisBlur                               0x00030a88   Data       13825  tretrisblur.o(.constdata)
+    tetris                                   0x00034089   Data       13825  tretris.o(.constdata)
+    GalleryBlur                              0x0003768a   Data       13825  galleryblur.o(.constdata)
+    Gallery                                  0x0003ac8b   Data       13825  gallery.o(.constdata)
+    mainBack                                 0x0003e28c   Data       153601  mainback.o(.constdata)
+    player                                   0x00063a8d   Data       64001  player.o(.constdata)
+    yellow2                                  0x0007348e   Data         513  yellow2.o(.constdata)
+    Region$$Table$$Base                      0x00073690   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x000736b0   Number         0  anon$$obj.o(Region$$Table)
+    VolCur                                   0x10000000   Data           2  adcuser.o(.data)
+    USB_DeviceAddress                        0x10000004   Data           1  usbcore.o(.data)
+    USB_Configuration                        0x10000005   Data           1  usbcore.o(.data)
+    USB_NumInterfaces                        0x10000006   Data           1  usbcore.o(.data)
+    USB_DeviceStatus                         0x10000008   Data           2  usbcore.o(.data)
+    USB_EndPointMask                         0x1000000c   Data           4  usbcore.o(.data)
+    USB_EndPointHalt                         0x10000010   Data           4  usbcore.o(.data)
+    USB_EndPointStall                        0x10000014   Data           4  usbcore.o(.data)
+    USB_AltSetting                           0x10000018   Data           4  usbcore.o(.data)
+    EP0Data                                  0x1000001c   Data           8  usbcore.o(.data)
+    SetupPacket                              0x10000024   Data           8  usbcore.o(.data)
+    DDMemMap                                 0x1000002c   Data           8  usbhw.o(.data)
+    AD_done                                  0x10000034   Data           1  adc.o(.data)
+    AD_last                                  0x10000036   Data           2  adc.o(.data)
+    clock_ms                                 0x10000040   Data           1  irq.o(.data)
+    InfoBuf                                  0x10000050   Data           4  media.o(.data)
+    Mute                                     0x10000054   Data           1  media.o(.data)
+    DataRun                                  0x10000055   Data           1  media.o(.data)
+    DataOut                                  0x10000056   Data           2  media.o(.data)
+    DataIn                                   0x10000058   Data           2  media.o(.data)
+    PotVal                                   0x1000005a   Data           2  media.o(.data)
+    DataBuf                                  0x1000005c   Data           4  media.o(.data)
+    selector                                 0x10000060   Data           4  media.o(.data)
+    currentDir                               0x10000064   Data           4  media.o(.data)
+    Volume                                   0x10000068   Data           4  media.o(.data)
+    VUM                                      0x1000006c   Data           4  media.o(.data)
+    Tick                                     0x10000070   Data           4  media.o(.data)
+    score                                    0x10000074   Data           4  media.o(.data)
+    blocks                                   0x10000078   Data         304  media.o(.data)
+    SystemCoreClock                          0x100001a8   Data           4  system_lpc17xx.o(.data)
+    SystemFrequency                          0x100001ac   Data           4  system_lpc17xx.o(.data)
+    EP0Buf                                   0x100001b0   Data          64  usbcore.o(.bss)
+    udca                                     0x100001f0   Data         128  usbhw.o(.bss)
+    text                                     0x10000270   Data          10  media.o(.bss)
+    board                                    0x1000027a   Data         150  media.o(.bss)
+    __libspace_start                         0x10000310   Data          96  libspace.o(.bss)
+    __temporary_stack_top$libspace           0x10000370   Data           0  libspace.o(.bss)
+    UDCA                                     0x10000570   Data         128  usbhw.o(USB_RAM)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x000000cd
+
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00073860, Max: 0x00080000, ABSOLUTE, COMPRESSED[0x000736ec])
+
+    Execution Region ER_IROM1 (Base: 0x00000000, Size: 0x000736b0, Max: 0x00080000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x000000cc   Data   RO            3    RESET               startup_lpc17xx.o
+    0x000000cc   0x00000008   Code   RO          584  * !!!main             c_w.l(__main.o)
+    0x000000d4   0x00000034   Code   RO          759    !!!scatter          c_w.l(__scatter.o)
+    0x00000108   0x0000005a   Code   RO          757    !!dczerorl2         c_w.l(__dczerorl2.o)
+    0x00000162   0x00000002   PAD
+    0x00000164   0x0000001c   Code   RO          761    !!handler_zi        c_w.l(__scatter_zi.o)
+    0x00000180   0x00000000   Code   RO          579    .ARM.Collect$$_printf_percent$$00000000  c_w.l(_printf_percent.o)
+    0x00000180   0x00000006   Code   RO          578    .ARM.Collect$$_printf_percent$$00000009  c_w.l(_printf_d.o)
+    0x00000186   0x00000004   Code   RO          597    .ARM.Collect$$_printf_percent$$00000017  c_w.l(_printf_percent_end.o)
+    0x0000018a   0x00000002   Code   RO          630    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
+    0x0000018c   0x00000000   Code   RO          643    .ARM.Collect$$libinit$$00000002  c_w.l(libinit2.o)
+    0x0000018c   0x00000000   Code   RO          646    .ARM.Collect$$libinit$$00000008  c_w.l(libinit2.o)
+    0x0000018c   0x00000000   Code   RO          648    .ARM.Collect$$libinit$$0000000A  c_w.l(libinit2.o)
+    0x0000018c   0x00000000   Code   RO          650    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
+    0x0000018c   0x00000000   Code   RO          653    .ARM.Collect$$libinit$$0000000F  c_w.l(libinit2.o)
+    0x0000018c   0x00000000   Code   RO          655    .ARM.Collect$$libinit$$00000011  c_w.l(libinit2.o)
+    0x0000018c   0x00000000   Code   RO          657    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
+    0x0000018c   0x00000000   Code   RO          659    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
+    0x0000018c   0x00000000   Code   RO          661    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
+    0x0000018c   0x00000000   Code   RO          663    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
+    0x0000018c   0x00000000   Code   RO          665    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
+    0x0000018c   0x00000000   Code   RO          667    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
+    0x0000018c   0x00000000   Code   RO          669    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
+    0x0000018c   0x00000000   Code   RO          671    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
+    0x0000018c   0x00000000   Code   RO          673    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
+    0x0000018c   0x00000000   Code   RO          677    .ARM.Collect$$libinit$$0000002A  c_w.l(libinit2.o)
+    0x0000018c   0x00000000   Code   RO          679    .ARM.Collect$$libinit$$0000002C  c_w.l(libinit2.o)
+    0x0000018c   0x00000000   Code   RO          681    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
+    0x0000018c   0x00000000   Code   RO          683    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
+    0x0000018c   0x00000002   Code   RO          684    .ARM.Collect$$libinit$$00000031  c_w.l(libinit2.o)
+    0x0000018e   0x00000002   Code   RO          715    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
+    0x00000190   0x00000000   Code   RO          742    .ARM.Collect$$libshutdown$$00000003  c_w.l(libshutdown2.o)
+    0x00000190   0x00000000   Code   RO          745    .ARM.Collect$$libshutdown$$00000006  c_w.l(libshutdown2.o)
+    0x00000190   0x00000000   Code   RO          748    .ARM.Collect$$libshutdown$$00000009  c_w.l(libshutdown2.o)
+    0x00000190   0x00000000   Code   RO          750    .ARM.Collect$$libshutdown$$0000000B  c_w.l(libshutdown2.o)
+    0x00000190   0x00000000   Code   RO          753    .ARM.Collect$$libshutdown$$0000000E  c_w.l(libshutdown2.o)
+    0x00000190   0x00000002   Code   RO          754    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
+    0x00000192   0x00000000   Code   RO          586    .ARM.Collect$$rtentry$$00000000  c_w.l(rtentry.o)
+    0x00000192   0x00000000   Code   RO          599    .ARM.Collect$$rtentry$$00000002  c_w.l(rtentry2.o)
+    0x00000192   0x00000006   Code   RO          611    .ARM.Collect$$rtentry$$00000004  c_w.l(rtentry4.o)
+    0x00000198   0x00000000   Code   RO          601    .ARM.Collect$$rtentry$$00000009  c_w.l(rtentry2.o)
+    0x00000198   0x00000004   Code   RO          602    .ARM.Collect$$rtentry$$0000000A  c_w.l(rtentry2.o)
+    0x0000019c   0x00000000   Code   RO          604    .ARM.Collect$$rtentry$$0000000C  c_w.l(rtentry2.o)
+    0x0000019c   0x00000008   Code   RO          605    .ARM.Collect$$rtentry$$0000000D  c_w.l(rtentry2.o)
+    0x000001a4   0x00000002   Code   RO          634    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
+    0x000001a6   0x00000000   Code   RO          688    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
+    0x000001a6   0x00000004   Code   RO          689    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
+    0x000001aa   0x00000006   Code   RO          690    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
+    0x000001b0   0x0000003c   Code   RO            5    .text               startup_lpc17xx.o
+    0x000001ec   0x000000ac   Code   RO           13    .text               adcuser.o
+    0x00000298   0x0000004c   Code   RO          207    .text               kbd.o
+    0x000002e4   0x00000006   Code   RO          582    .text               c_w.l(heapauxi.o)
+    0x000002ea   0x0000000a   Code   RO          595    .text               c_w.l(_sputc.o)
+    0x000002f4   0x00000008   Code   RO          631    .text               c_w.l(libspace.o)
+    0x000002fc   0x00000004   Code   RO            4    .ARM.__at_0x02FC    startup_lpc17xx.o
+    0x00000300   0x0000023c   Code   RO           58    .text               usbcore.o
+    0x0000053c   0x00000690   Code   RO          149    .text               usbhw.o
+    0x00000bcc   0x000000ac   Code   RO          183    .text               usbuser.o
+    0x00000c78   0x00000094   Code   RO          249    .text               adc.o
+    0x00000d0c   0x00000a58   Code   RO          275    .text               glcd_spi_lpc1700.o
+    0x00001764   0x0000004c   Code   RO          314    .text               irq.o
+    0x000017b0   0x00000088   Code   RO          339    .text               led.o
+    0x00001838   0x00000870   Code   RO          355    .text               media.o
+    0x000020a8   0x00000260   Code   RO          416    .text               system_lpc17xx.o
+    0x00002308   0x000000ee   Code   RO          548    .text               c_w.l(lludivv7m.o)
+    0x000023f6   0x00000002   PAD
+    0x000023f8   0x00000028   Code   RO          552    .text               c_w.l(noretval__2sprintf.o)
+    0x00002420   0x00000068   Code   RO          554    .text               c_w.l(__printf.o)
+    0x00002488   0x00000078   Code   RO          556    .text               c_w.l(_printf_dec.o)
+    0x00002500   0x00000064   Code   RO          580    .text               c_w.l(rt_memcpy_w.o)
+    0x00002564   0x000000b8   Code   RO          591    .text               c_w.l(_printf_intcommon.o)
+    0x0000261c   0x00000030   Code   RO          593    .text               c_w.l(_printf_char_common.o)
+    0x0000264c   0x0000004a   Code   RO          617    .text               c_w.l(sys_stackheap_outer.o)
+    0x00002696   0x0000000c   Code   RO          619    .text               c_w.l(exit.o)
+    0x000026a2   0x00000002   PAD
+    0x000026a4   0x0000000c   Code   RO          685    .text               c_w.l(sys_exit.o)
+    0x000026b0   0x00000002   Code   RO          704    .text               c_w.l(use_no_semi.o)
+    0x000026b2   0x00000000   Code   RO          706    .text               c_w.l(indicate_semi.o)
+    0x000026b2   0x00000002   PAD
+    0x000026b4   0x00000088   Code   RO           94    i.USB_ReqGetDescriptor  usbcore.o
+    0x0000273c   0x0000007c   Code   RO           89    i.USB_ReqGetStatus  usbcore.o
+    0x000027b8   0x00000098   Code   RO           71    i.USB_ReqSetClrFeature  usbcore.o
+    0x00002850   0x00000160   Code   RO           77    i.USB_ReqSetConfiguration  usbcore.o
+    0x000029b0   0x00000100   Code   RO           83    i.USB_ReqSetInterface  usbcore.o
+    0x00002ab0   0x00000012   Data   RO          132    .constdata          usbdesc.o
+    0x00002ac2   0x0000006e   Data   RO          133    .constdata          usbdesc.o
+    0x00002b30   0x00000064   Data   RO          134    .constdata          usbdesc.o
+    0x00002b94   0x00000010   Data   RO          151    .constdata          usbhw.o
+    0x00002ba4   0x00000040   Data   RO          184    .constdata          usbuser.o
+    0x00002be4   0x00001880   Data   RO          276    .constdata          glcd_spi_lpc1700.o
+    0x00004464   0x00000020   Data   RO          340    .constdata          led.o
+    0x00004484   0x00025801   Data   RO          448    .constdata          computers.o
+    0x00029c85   0x00000201   Data   RO          455    .constdata          blubox.o
+    0x00029e86   0x00003601   Data   RO          476    .constdata          audioimageblur.o
+    0x0002d487   0x00003601   Data   RO          483    .constdata          audioimage.o
+    0x00030a88   0x00003601   Data   RO          490    .constdata          tretrisblur.o
+    0x00034089   0x00003601   Data   RO          497    .constdata          tretris.o
+    0x0003768a   0x00003601   Data   RO          504    .constdata          galleryblur.o
+    0x0003ac8b   0x00003601   Data   RO          511    .constdata          gallery.o
+    0x0003e28c   0x00025801   Data   RO          518    .constdata          mainback.o
+    0x00063a8d   0x0000fa01   Data   RO          525    .constdata          player.o
+    0x0007348e   0x00000201   Data   RO          532    .constdata          yellow2.o
+    0x0007368f   0x00000001   PAD
+    0x00073690   0x00000020   Data   RO          755    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Base: 0x10000000, Size: 0x000005f0, Max: 0x00008000, ABSOLUTE, COMPRESSED[0x0000003c])
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x10000000   0x00000002   Data   RW           17    .data               adcuser.o
+    0x10000002   0x00000002   PAD
+    0x10000004   0x00000028   Data   RW           60    .data               usbcore.o
+    0x1000002c   0x00000008   Data   RW          152    .data               usbhw.o
+    0x10000034   0x00000004   Data   RW          250    .data               adc.o
+    0x10000038   0x00000006   Data   RW          277    .data               glcd_spi_lpc1700.o
+    0x1000003e   0x00000002   PAD
+    0x10000040   0x00000010   Data   RW          315    .data               irq.o
+    0x10000050   0x00000004   Data   RW          357    .data               media.o
+    0x10000054   0x00000154   Data   RW          358    .data               media.o
+    0x100001a8   0x00000008   Data   RW          417    .data               system_lpc17xx.o
+    0x100001b0   0x00000040   Zero   RW           59    .bss                usbcore.o
+    0x100001f0   0x00000080   Zero   RW          150    .bss                usbhw.o
+    0x10000270   0x000000a0   Zero   RW          356    .bss                media.o
+    0x10000310   0x00000060   Zero   RW          632    .bss                c_w.l(libspace.o)
+    0x10000370   0x00000000   Zero   RW            2    HEAP                startup_lpc17xx.o
+    0x10000370   0x00000200   Zero   RW            1    STACK               startup_lpc17xx.o
+    0x10000570   0x00000080   Zero   RW          153    USB_RAM             usbhw.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       148         20          0          4          0      21224   adc.o
+       172         16          0          2          0      10088   adcuser.o
+         0          0      13825          0          0        253   audioimage.o
+         0          0      13825          0          0        269   audioimageblur.o
+         0          0        513          0          0        245   blubox.o
+         0          0     153601          0          0        248   computers.o
+         0          0      13825          0          0        238   gallery.o
+         0          0      13825          0          0        254   galleryblur.o
+      2648         44       6272          6          0       7650   glcd_spi_lpc1700.o
+        76          8          0         16          0        617   irq.o
+        76         18          0          0          0        864   kbd.o
+       136         12         32          0          0       1235   led.o
+         0          0     153601          0          0        243   mainback.o
+      2160        260          0        344        160      11749   media.o
+         0          0      64001          0          0        237   player.o
+        64         26        204          0        512        840   startup_lpc17xx.o
+       608         32          0          8          0       1151   system_lpc17xx.o
+         0          0      13825          0          0        237   tretris.o
+         0          0      13825          0          0        253   tretrisblur.o
+      1592         76          0         40         64       8441   usbcore.o
+         0          0        228          0          0        517   usbdesc.o
+      1680        138         16          8        256      27325   usbhw.o
+       172         20         64          0          0       2703   usbuser.o
+         0          0        513          0          0        238   yellow2.o
+
+    ----------------------------------------------------------------------
+      9532        670     462028        432        992      97119   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+         0          0          1          4          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+        90          0          0          0          0          0   __dczerorl2.o
+         8          0          0          0          0         68   __main.o
+       104          0          0          0          0         84   __printf.o
+        52          8          0          0          0          0   __scatter.o
+        28          0          0          0          0          0   __scatter_zi.o
+        48          6          0          0          0         96   _printf_char_common.o
+         6          0          0          0          0          0   _printf_d.o
+       120         18          0          0          0         92   _printf_dec.o
+       184          0          0          0          0         88   _printf_intcommon.o
+         0          0          0          0          0          0   _printf_percent.o
+         4          0          0          0          0          0   _printf_percent_end.o
+        10          0          0          0          0         68   _sputc.o
+        12          0          0          0          0         72   exit.o
+         6          0          0          0          0        152   heapauxi.o
+         0          0          0          0          0          0   indicate_semi.o
+         2          0          0          0          0          0   libinit.o
+         2          0          0          0          0          0   libinit2.o
+         2          0          0          0          0          0   libshutdown.o
+         2          0          0          0          0          0   libshutdown2.o
+         8          4          0          0         96         68   libspace.o
+       238          0          0          0          0        100   lludivv7m.o
+        40          6          0          0          0         84   noretval__2sprintf.o
+       100          0          0          0          0         80   rt_memcpy_w.o
+         0          0          0          0          0          0   rtentry.o
+        12          0          0          0          0          0   rtentry2.o
+         6          0          0          0          0          0   rtentry4.o
+         2          0          0          0          0          0   rtexit.o
+        10          0          0          0          0          0   rtexit2.o
+        12          4          0          0          0         68   sys_exit.o
+        74          0          0          0          0         80   sys_stackheap_outer.o
+         2          0          0          0          0         68   use_no_semi.o
+
+    ----------------------------------------------------------------------
+      1192         46          0          0         96       1268   Library Totals
+         8          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+      1184         46          0          0         96       1268   c_w.l
+
+    ----------------------------------------------------------------------
+      1192         46          0          0         96       1268   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+     10724        716     462028        432       1088      95995   Grand Totals
+     10724        716     462028         60       1088      95995   ELF Image Totals (compressed)
+     10724        716     462028         60          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)               472752 ( 461.67kB)
+    Total RW  Size (RW Data + ZI Data)              1520 (   1.48kB)
+    Total ROM Size (Code + RO Data + RW Data)     472812 ( 461.73kB)
+
+==============================================================================
+
