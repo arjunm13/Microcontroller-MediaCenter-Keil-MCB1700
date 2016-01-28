@@ -3,8 +3,8 @@ A media center was implimented using the Keil MCB1700 Including an interactive T
 
 
 
-![Alt tag](https://github.com/arjunm13/Microcontroller-MediaCenter-TetrisGame-Keil-MCB1700/blob/master/Tetris2.jpg?raw=true)
-![Alt tag](https://github.com/arjunm13/Microcontroller-MediaCenter-TetrisGame-Keil-MCB1700/blob/master/Tetris1.jpg?raw=true)
-![Alt tag](https://github.com/arjunm13/Microcontroller-MediaCenter-TetrisGame-Keil-MCB1700/blob/master/HomeScreen-Tetris-iconSelected.jpg?raw=true)
-![Alt tag](https://github.com/arjunm13/Microcontroller-MediaCenter-TetrisGame-Keil-MCB1700/blob/master/MediaPLayerSplashScreen.jpg?raw=true)
-![Alt tag](https://github.com/arjunm13/Microcontroller-MediaCenter-TetrisGame-Keil-MCB1700/blob/master/HomeScreen-Screenshot.jpg?raw=true)
+![Alt tag](https://github.com/arjunm13/Microcontroller-MediaCenter-TetrisGame-Keil-MCB1700/blob/master/Tetris2.jpg)
+![Alt tag](https://github.com/arjunm13/Microcontroller-MediaCenter-TetrisGame-Keil-MCB1700/blob/master/Tetris1.jpg)
+![Alt tag](https://github.com/arjunm13/Microcontroller-MediaCenter-TetrisGame-Keil-MCB1700/blob/master/HomeScreen-Tetris-iconSelected.jpg)
+![Alt tag](https://github.com/arjunm13/Microcontroller-MediaCenter-TetrisGame-Keil-MCB1700/blob/master/MediaPLayerSplashScreen.jpg)
+![Alt tag](https://github.com/arjunm13/Microcontroller-MediaCenter-TetrisGame-Keil-MCB1700/blob/master/HomeScreen-Screenshot.jpg)
